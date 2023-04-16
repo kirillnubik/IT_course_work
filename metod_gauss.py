@@ -1,0 +1,44 @@
+import numpy as np
+
+
+# def floolproof():               # Функция защиты от дурака
+#     while True:
+#         try:
+#             N = int(input("Введите число: "))
+#             return (N)
+#         except ValueError:
+#             pass
+# [[1, 2, 3, -2, 1],
+#  [2, -1, -2, -3, 2],
+#  [3, 2, -1, 2, -5],
+#  [2, -3, 2, 1, 11]]
+
+#matrix = [[] for _ in range(floolproof())]
+
+def Gauss(matrix_table, accuracy):
+
+    mas_return = {}
+
+    # Расширенная матирица с коэффицентами неизвестных
+    matrix = np.array(matrix_table)
+
+    for i in range(1, len(matrix[0])):
+        mas_return.update({(f"x{i}"): None})
+
+    for i in range(len(matrix[0])):  # столбцы
+        for j in range(1, len(matrix)):  # строки
+            if i+j < len(matrix):
+                matrix[j+i] = matrix[j+i]*matrix[i, i] + \
+                    matrix[i]*matrix[j+i, i]*(-1)
+                # print()
+                # print(matrix)
+
+    for j in range(len(matrix)-1):
+        for i in range(j+1, len(matrix[0])-1):
+            matrix[j] = matrix[j]*matrix[i, i] + matrix[i]*matrix[j, i]*(-1)
+            # print()
+            # print(matrix)
+
+    for i in range(1, len(matrix[0])):
+        mas_return[(f"x{len(matrix[0])-i}")] = round(matrix[len(matrix)-i,len(matrix[0])-1] / matrix[len(matrix)-i, len(matrix[0])-1-i], accuracy)
+    return mas_return
