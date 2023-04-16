@@ -47,10 +47,15 @@ class MainWindow(QWidget, Ui_Form):
         self.lineEdit_3.setText(str(Kramer(self.matrix_arg, self.matrix_free_arg, self.accuracy)))
         
 
-    def InitialTable(self, rows, colum_name):
-        self.tableWidget.setRowCount(rows)
-        self.tableWidget.setColumnCount(len(colum_name))
-        self.tableWidget.setHorizontalHeaderLabels(colum_name)
+    def InitialTable(self):
+        self.colum_name = []
+        for i in range(int(self.lineEdit_4.text())):
+            self.colum_name.append(f"x{i+1}")
+        self.colum_name.append("b")
+        self.rows = int(self.lineEdit_4.text())
+        self.tableWidget.setRowCount(self.rows)
+        self.tableWidget.setColumnCount(len(self.colum_name))
+        self.tableWidget.setHorizontalHeaderLabels(self.colum_name)
 
         # self.pushButton.clicked()
 # print(matrix)
@@ -58,4 +63,3 @@ app = QApplication(sys.argv)
 window = MainWindow()
 window.show()
 sys.exit(app.exec_())
-    
