@@ -22,9 +22,9 @@ class MainWindow(QWidget, Ui_Form):
         self.tableWidget.setColumnCount(len(self.colum_name))
         self.tableWidget.setHorizontalHeaderLabels(self.colum_name)
       #  self.InitialTable(self.colum_name, self.rows)
-        self.pushButton.clicked.connect(self.GaussCalculation)
+        self.pushButton_3.clicked.connect(self.GaussCalculation)
         self.pushButton_2.clicked.connect(self.AccuracyСalculation)
-        self.pushButton_3.clicked.connect(self.KramerCalculation)
+        self.pushButton.clicked.connect(self.KramerCalculation)
         self.pushButton_4.clicked.connect(self.InitialTable)
 
     def AccuracyСalculation(self):
