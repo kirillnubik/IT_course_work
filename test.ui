@@ -122,7 +122,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Здать</string>
+        <string>Задать</string>
        </property>
       </widget>
      </item>

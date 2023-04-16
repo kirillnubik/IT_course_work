@@ -158,7 +158,7 @@ class Ui_Form(object):
         self.label.setText(QCoreApplication.translate("Form", u"\u0417\u0430\u0434\u0430\u0439\u0442\u0435 \u0442\u043e\u0447\u043d\u043e\u0441\u0442\u044c \u0438\u0437\u043c\u0435\u0440\u0435\u043d\u0438\u0439:", None))
         self.pushButton_2.setText(QCoreApplication.translate("Form", u"\u0417\u0430\u0434\u0430\u0442\u044c", None))
         self.label_3.setText(QCoreApplication.translate("Form", u"\u0417\u0430\u0434\u0430\u0439\u0442\u0435 \u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043d\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043d\u044b\u0445:", None))
-        self.pushButton_4.setText(QCoreApplication.translate("Form", u"\u0417\u0434\u0430\u0442\u044c", None))
+        self.pushButton_4.setText(QCoreApplication.translate("Form", u"\u0417\u0430\u0434\u0430\u0442\u044c", None))
         self.label_2.setText(QCoreApplication.translate("Form", u"\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u043a\u043e\u044d\u0444\u0444\u0438\u0446\u0435\u043d\u0442\u044b \u0443\u0440\u0430\u0432\u043d\u0435\u043d\u0438\u0439:", None))
         self.label_4.setText(QCoreApplication.translate("Form", u"\u041c\u0435\u0442\u043e\u0434 \u0413\u0430\u0443\u0441\u0430:", None))
         self.pushButton_3.setText(QCoreApplication.translate("Form", u"\u0420\u0430\u0441\u0447\u0435\u0442", None))
