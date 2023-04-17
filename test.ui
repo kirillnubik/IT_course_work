@@ -166,13 +166,16 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_3">
+      <widget class="QLineEdit" name="lineEdit_2">
        <property name="font">
         <font>
          <pointsize>14</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
+       </property>
+       <property name="tabletTracking">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -209,16 +212,13 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_2">
+      <widget class="QLineEdit" name="lineEdit_3">
        <property name="font">
         <font>
          <pointsize>14</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
-       </property>
-       <property name="tabletTracking">
-        <bool>true</bool>
        </property>
       </widget>
      </item>

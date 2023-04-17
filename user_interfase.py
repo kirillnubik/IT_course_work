@@ -107,11 +107,12 @@ class Ui_Form(object):
 
         self.horizontalLayout_2.addWidget(self.label_4)
 
-        self.lineEdit_3 = QLineEdit(Form)
-        self.lineEdit_3.setObjectName(u"lineEdit_3")
-        self.lineEdit_3.setFont(font1)
+        self.lineEdit_2 = QLineEdit(Form)
+        self.lineEdit_2.setObjectName(u"lineEdit_2")
+        self.lineEdit_2.setFont(font1)
+        self.lineEdit_2.setTabletTracking(True)
 
-        self.horizontalLayout_2.addWidget(self.lineEdit_3)
+        self.horizontalLayout_2.addWidget(self.lineEdit_2)
 
         self.pushButton_3 = QPushButton(Form)
         self.pushButton_3.setObjectName(u"pushButton_3")
@@ -130,12 +131,11 @@ class Ui_Form(object):
 
         self.horizontalLayout_3.addWidget(self.label_5)
 
-        self.lineEdit_2 = QLineEdit(Form)
-        self.lineEdit_2.setObjectName(u"lineEdit_2")
-        self.lineEdit_2.setFont(font1)
-        self.lineEdit_2.setTabletTracking(True)
+        self.lineEdit_3 = QLineEdit(Form)
+        self.lineEdit_3.setObjectName(u"lineEdit_3")
+        self.lineEdit_3.setFont(font1)
 
-        self.horizontalLayout_3.addWidget(self.lineEdit_2)
+        self.horizontalLayout_3.addWidget(self.lineEdit_3)
 
         self.pushButton = QPushButton(Form)
         self.pushButton.setObjectName(u"pushButton")

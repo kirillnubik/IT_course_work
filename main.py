@@ -21,7 +21,6 @@ class MainWindow(QWidget, Ui_Form):
         self.tableWidget.setRowCount(self.rows)
         self.tableWidget.setColumnCount(len(self.colum_name))
         self.tableWidget.setHorizontalHeaderLabels(self.colum_name)
-      #  self.InitialTable(self.colum_name, self.rows)
         self.pushButton_3.clicked.connect(self.GaussCalculation)
         self.pushButton_2.clicked.connect(self.AccuracyСalculation)
         self.pushButton.clicked.connect(self.KramerCalculation)
@@ -36,7 +35,7 @@ class MainWindow(QWidget, Ui_Form):
             for colume in range(len(self.colum_name)):
                 self.matrix[row].append(float(self.tableWidget.item(row, colume).text()))
         self.lineEdit_2.setText(str(Gauss(self.matrix, self.accuracy)))
-    
+
     def KramerCalculation(self):
         self.matrix_arg = [[] for _ in range(self.rows)]
         self.matrix_free_arg = []
@@ -44,8 +43,8 @@ class MainWindow(QWidget, Ui_Form):
             self.matrix_free_arg.append(float(self.tableWidget.item(row, len(self.colum_name)-1).text()))
             for colume in range(len(self.colum_name)-1):
                 self.matrix_arg[row].append(float(self.tableWidget.item(row, colume).text()))
-        self.lineEdit_3.setText(str(Kramer(self.matrix_arg, self.matrix_free_arg, self.accuracy)))
-        
+        self.lineEdit_3.setText(
+            str(Kramer(self.matrix_arg, self.matrix_free_arg, self.accuracy)))
 
     def InitialTable(self):
         self.colum_name = []
@@ -57,8 +56,7 @@ class MainWindow(QWidget, Ui_Form):
         self.tableWidget.setColumnCount(len(self.colum_name))
         self.tableWidget.setHorizontalHeaderLabels(self.colum_name)
 
-        # self.pushButton.clicked()
-# print(matrix)
+
 app = QApplication(sys.argv)
 window = MainWindow()
 window.show()
