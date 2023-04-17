@@ -11,6 +11,15 @@ def Gauss(matrix_table, accuracy):
     for i in range(1, len(matrix[0])):
         mas_return.update({(f"x{i}"): None})
 
+    
+    if matrix[0, 0] == 0:
+        for i in range(1, len(matrix)):
+            print(matrix)
+            if matrix[i,0] != 0:
+                matrix[[i,0]] = matrix[[0,i]]
+                
+                
+
     for i in range(len(matrix[0])):  # столбцы
         for j in range(1, len(matrix)):  # строки
             if i+j < len(matrix):
@@ -26,5 +35,5 @@ def Gauss(matrix_table, accuracy):
             # print(matrix)
 
     for i in range(1, len(matrix[0])):
-        mas_return[(f"x{len(matrix[0])-i}")] = round(matrix[len(matrix)-i,  len(matrix[0])-1] / matrix[len(matrix)-i, len(matrix[0])-1-i], accuracy)
+        mas_return[(f"x{len(matrix[0])-i}")] = round(matrix[len(matrix)-i, len(matrix[0])-1] / matrix[len(matrix)-i, len(matrix[0])-1-i], accuracy)
     return mas_return
