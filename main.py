@@ -1,7 +1,7 @@
 import sys
 from metod_gauss import Gauss
 from metod_kramer import Kramer
-from PySide2.QtWidgets import QApplication, QWidget, QTableWidget
+from PySide2.QtWidgets import QApplication, QWidget
 from user_interfase import Ui_Form
 
 
