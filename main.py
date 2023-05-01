@@ -26,9 +26,11 @@ class MainWindow(QWidget, Ui_Form):
         self.pushButton.clicked.connect(self.KramerCalculation)
         self.pushButton_4.clicked.connect(self.InitialTable)
 
+    #   Задание точности расчетов
     def AccuracyСalculation(self):
         self.accuracy = int(self.lineEdit.text())
 
+    #   Составление рабочей матрицы для метода Гаусса
     def GaussCalculation(self):
         self.matrix = [[] for _ in range(self.rows)]
         for row in range(self.rows):
@@ -36,16 +38,18 @@ class MainWindow(QWidget, Ui_Form):
                 self.matrix[row].append(float(self.tableWidget.item(row, colume).text()))
         self.lineEdit_2.setText(str(Gauss(self.matrix, self.accuracy)))
 
+    #   Составление рабочей матрицы для метода Крамера
     def KramerCalculation(self):
         self.matrix_arg = [[] for _ in range(self.rows)]
         self.matrix_free_arg = []
         for row in range(self.rows):
-            self.matrix_free_arg.append(float(self.tableWidget.item(row, len(self.colum_name)-1).text()))
+            self.matrix_free_arg.append(
+                float(self.tableWidget.item(row, len(self.colum_name)-1).text()))
             for colume in range(len(self.colum_name)-1):
                 self.matrix_arg[row].append(float(self.tableWidget.item(row, colume).text()))
         self.lineEdit_3.setText(
             str(Kramer(self.matrix_arg, self.matrix_free_arg, self.accuracy)))
-
+    #   Обновление размера таблицы
     def InitialTable(self):
         self.colum_name = []
         for i in range(int(self.lineEdit_4.text())):

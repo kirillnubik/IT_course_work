@@ -9,6 +9,8 @@ def Kramer(matrix_arg, matrix_free_arg, accuracy):
     matrix_copy = matrix_T.copy()
     det_osnov = np.linalg.det(matrix)  # Детерминант основной матрицы
     
+
+    #   Поочередная замена столбцов в основной матрице и расчет корней.
     for i in range(len(matrix)):
         matrix_copy[i] = matrix_ravn
         mas_return.update({(f"x{i+1}"): round(np.linalg.det(matrix_copy) / det_osnov, accuracy)})
