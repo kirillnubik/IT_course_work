@@ -60,8 +60,8 @@ class MainWindow(QWidget, Ui_Form):
         self.tableWidget.setColumnCount(len(self.colum_name))
         self.tableWidget.setHorizontalHeaderLabels(self.colum_name)
 
-
-app = QApplication(sys.argv)
-window = MainWindow()
-window.show()
-sys.exit(app.exec_())
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec_())
