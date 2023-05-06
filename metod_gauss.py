@@ -12,15 +12,14 @@ def Gauss(matrix_table, accuracy):
     for i in range(1, len(matrix[0])):
         mas_return.update({(f"x{i}"): None})
 
-    #   Проверка, явлеется ли первый элемент матрицы нулём, если да, 
+    #   Проверка, явлеется ли первый элемент матрицы нулём, если да,
     # то строка заменяется на ту, в которой первый элемен не равен нулю.
     if matrix[0, 0] == 0:
         for i in range(1, len(matrix)):
             print(matrix)
-            if matrix[i,0] != 0:
-                matrix[[i,0]] = matrix[[0,i]]
-                
-                
+            if matrix[i, 0] != 0:
+                matrix[[i, 0]] = matrix[[0, i]]
+
     #   Перебор матрицы и приведение к треугольному виду.
     for i in range(len(matrix[0])):  # столбцы
         for j in range(1, len(matrix)):  # строки
@@ -33,5 +32,6 @@ def Gauss(matrix_table, accuracy):
             matrix[j] = matrix[j]*matrix[i, i] + matrix[i]*matrix[j, i]*(-1)
     #   Расчет корня и добавление его в словарь ответов.
     for i in range(1, len(matrix[0])):
-        mas_return[(f"x{len(matrix[0])-i}")] = round(matrix[len(matrix)-i, len(matrix[0])-1] / matrix[len(matrix)-i, len(matrix[0])-1-i], accuracy)
+        mas_return[(f"x{len(matrix[0])-i}")] = round(matrix[len(matrix)-i,
+                    len(matrix[0])-1] / matrix[len(matrix)-i, len(matrix[0])-1-i], accuracy)
     return mas_return
